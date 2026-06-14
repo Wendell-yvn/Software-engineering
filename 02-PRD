@@ -1,0 +1,175 @@
+## 1. Product Overview
+
+Aplikasi ini adalah platform pemesanan jasa perbaikan dan perawatan sepatu yang menghubungkan pelanggan dengan penyedia jasa (misalnya tukang sol sepatu di pasar atau layanan mobile). Platform ini bertujuan untuk menggantikan proses manual via chat dengan sistem pemesanan yang lebih terstruktur, transparan, dan mudah dilacak.
+
+---
+
+## 2. Problem Statement
+
+Saat ini, penyedia jasa sol sepatu masih mengelola pesanan secara manual melalui WhatsApp atau interaksi langsung. Hal ini menyebabkan:
+
+* Pesanan tidak terorganisir
+* Sulit mengatur jadwal (overbooking atau bentrok)
+* Tidak ada sistem tracking pekerjaan
+* Sulit menjangkau pelanggan baru di luar lokasi fisik
+* Ketergantungan pada komunikasi manual yang tidak efisien
+
+---
+
+## 3. Goals & Objectives
+
+### Goals
+
+* Menyederhanakan proses pemesanan jasa
+* Menstandarkan alur kerja penyedia jasa
+* Membantu UMKM menjangkau pelanggan lebih luas
+
+### Success Metrics (MVP)
+
+* Waktu pemesanan lebih cepat dibanding chat manual
+* Tidak ada double booking dalam sistem
+* Minimal 70% order memiliki status tracking aktif
+* Peningkatan repeat order pelanggan
+
+---
+
+## 4. Target Users
+
+### Primary Users
+
+* Pelanggan (pembeli jasa sol sepatu)
+* Penyedia jasa (tukang sol sepatu / jasa cleaning sepatu)
+
+### Secondary Users
+
+* Admin sistem (untuk monitoring jika diperlukan di versi awal)
+
+---
+
+## 5. MVP Scope (Fitur Utama)
+
+### 1. Sistem Booking
+
+* Pelanggan memilih penyedia jasa
+* Memilih slot waktu (time-based scheduling)
+* Membuat order otomatis
+
+**Kenapa penting:**
+Mengganti sistem chat manual dengan sistem terstruktur.
+
+---
+
+### 2. Tracking Status Pekerjaan
+
+Status:
+
+* Diterima
+* Diproses
+* Selesai
+
+**Kenapa penting:**
+Mengurangi komunikasi manual dan meningkatkan transparansi.
+
+---
+
+### 3. Portfolio Penyedia Jasa
+
+* Galeri hasil pekerjaan
+* Ditampilkan di profil penyedia jasa
+
+**Kenapa penting:**
+Meningkatkan trust dan membantu akuisisi pelanggan baru.
+
+---
+
+## 6. Out of Scope (MVP Tidak Termasuk)
+
+* Estimasi harga otomatis
+* Rating & review
+* Sistem pembayaran in-app / escrow
+* Layanan antar-jemput pihak ketiga
+* Dispute management system
+* Chat real-time
+
+---
+
+## 7. User Flow (End-to-End)
+
+### A. Pembeli
+
+1. Buka aplikasi
+2. Lihat daftar penyedia jasa
+3. Pilih penyedia jasa
+4. Pilih slot waktu
+5. Booking dibuat
+6. Menunggu status pekerjaan
+7. Terima notifikasi selesai
+8. Selesai transaksi (offline payment)
+
+---
+
+### B. Penyedia Jasa
+
+1. Login ke dashboard
+2. Melihat order masuk
+3. Konfirmasi order
+4. Mengerjakan sepatu
+5. Update status (Diterima → Diproses → Selesai)
+6. Menyelesaikan order
+
+---
+
+## 8. Logistik Model (Delivery Mechanism)
+
+Model hybrid:
+
+* **Static provider (contoh Opa Ferry):** pembeli datang ke lokasi
+* **Mobile provider (contoh Uncle):** penyedia datang ke lokasi pembeli
+
+Validasi lokasi mobile:
+
+* Radius berbasis titik pusat (geolocation)
+* Sistem otomatis menolak jika di luar jangkauan
+
+---
+
+## 9. System Rules
+
+* Booking hanya valid jika slot tersedia
+* Tidak boleh ada double booking
+* Status hanya bisa berubah secara berurutan
+* Lokasi mobile harus dalam radius layanan
+
+---
+
+## 10. Risk & Trade-off
+
+### Risiko MVP
+
+* Tidak ada perlindungan transaksi (no escrow)
+* Tidak ada sistem dispute
+* Pembayaran dilakukan di luar aplikasi
+* Tidak ada sistem reputasi (rating)
+
+### Alasan Trade-off
+
+Fokus MVP adalah **operational system (booking + tracking)**, bukan financial layer.
+
+---
+
+## 11. Future Enhancements (V2)
+
+* Rating & review system
+* Estimasi harga otomatis
+* In-app payment & escrow
+* Dispute resolution system
+* Layanan antar-jemput pihak ketiga
+* Smart matching berdasarkan lokasi & harga
+* Promo & loyalty system
+
+---
+
+## 12. Product Positioning Statement
+
+Aplikasi ini bukan sekadar marketplace, tetapi **sistem operasional digital untuk UMKM jasa sepatu**, yang mengubah proses manual berbasis chat menjadi alur kerja yang terstruktur dan dapat dilacak.
+
